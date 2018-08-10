@@ -1,4 +1,4 @@
-Find the Index
+"""Find the Index
 
 Create a function that takes a list and a string as arguments and return the index of the string.
 
@@ -12,8 +12,8 @@ Notes
 • Don't forget to return the result.
 • All tests contain valid numbers.
 • If you are stuck, find help in the Resources tab.
-•The variable for list is lst, not 1st.
+•The variable for list is lst, not 1st."""
 
------------------------------------CODE------------------------------------------
+#-----------------------------------CODE------------------------------------------
 def find_index(lst, str):
 	return lst.index(str)
