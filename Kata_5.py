@@ -42,3 +42,56 @@ def sum_two_smallest_nums(lst):
 			else:
 				num2 = lst[i]
 	return num1+num2
+
+
+"""
+Ejercicio 2: 
+Cumulative List Sum
+
+Create a function that takes a list of numbers and returns a list where each number is the sum of itself + all previous numbers in the list.
+Examples
+
+[1, 2, 3] ➞ [1, 3, 6]
+
+[1, -2, 3] ➞ [1, -1, 2]
+
+[3, 3, -2, 408, 3, 3] ➞ [3, 6, 4, 412, 415, 418]
+
+Notes
+
+Return an empty list if the input is an empty list.
+"""
+#---------------------------Code-----------------------------------------
+def cumulative_sum(lst):
+	lista = [x for x in lst]
+	for i in range(len(lst)):
+		for j in range(0, i):
+			lista[i]+=lst[j]
+	return lista
+
+"""
+Ejercicio 3: 
+Find the Minimum, Maximum, Length and Average Values
+
+Create a function that takes a list of numbers and returns the following statistics:
+
+    Minimum Value
+    Maximum Value
+    Sequence Length
+    Average Value
+
+Examples
+
+[6, 9, 15, -2, 92, 11] ➞ [-2, 92, 6, 21.833333333333332]
+
+[30, 43, 20, 92, 3, 74] ➞ [3, 92, 6, 43.666666666666664]
+
+[4.54, 8.32, 5.20] ➞ [4.54, 8.32, 3, 6.02]
+
+Notes
+
+N/A
+"""
+#---------------------------Code-----------------------------------------
+def minMaxLengthAverage(lst):
+	return [min(lst), max(lst), len(lst), (sum(lst)/len(lst))]
