@@ -20,3 +20,25 @@ Notes
     Don't count negative numbers.
     Floats and empty lists will not be used in any of the test cases.
 """
+#---------------------------Code-----------------------------------------
+def sum_two_smallest_nums(lst):
+	num1 = lst[0]
+	num2 = lst[1]
+	for i in range(2, len(lst)):
+		if lst[i] < 0: continue
+		elif num1 < 0:
+			num1 = lst[i]
+		elif num2 < 0:
+			num2 = lst[i]
+		elif lst[i] >= num1 and lst[i] >= num2: continue
+		elif lst[i] <= num1:
+			if num1 < num2:
+				num2 = lst[i]
+			else:
+				num1 = lst[i]
+		else:
+			if num2 < num1:
+				num1 = lst[i]
+			else:
+				num2 = lst[i]
+	return num1+num2
